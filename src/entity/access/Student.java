@@ -1,4 +1,11 @@
 package entity.access;
 
-public class Student {
+import utils.enums.StudyYear;
+
+public class Student extends UserProfile{
+
+    private StudyYear year;
+
+
+    //complete class
 }
