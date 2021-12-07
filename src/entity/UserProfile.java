@@ -1,23 +1,17 @@
-package entity.access;
+package entity;
 
-import java.util.UUID;
 
 public abstract class UserProfile {
 
-    private UUID userId;
     private String fullName;
     private String username;
     private String password;
 
 
-    public UserProfile(UUID id, String fullName, String username, String password) {
-        this.userId = id;
+    public UserProfile(String fullName, String username, String password) {
         this.fullName = fullName;
         this.username = username;
         this.password = password;
-    }
-
-    public UserProfile() {
     }
 
     public String getFullName() {
@@ -44,13 +38,6 @@ public abstract class UserProfile {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "UserProfile{" +
-                "fullName='" + fullName + '\'' +
-                ", username='" + username + '\'' +
-                '}';
-    }
-
+    public abstract String getFullname();
     //create abstract method
 }
